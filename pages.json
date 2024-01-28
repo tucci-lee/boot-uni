@@ -1,0 +1,216 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/agreement/userAgreement",
+			"style": {
+				"navigationBarTitleText": "用户协议",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/webview/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path": "pages/authorize/signup",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/authorize/mpSignup",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/authorize/signin",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/authorize/quickSignin",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/authorize/password",
+			"style": {
+				"navigationBarTitleText": "找回密码",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/profile/index",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/profile/avatar",
+			"style": {
+				"navigationBarTitleText": "头像",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/profile/nickname",
+			"style": {
+				"navigationBarTitleText": "昵称",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/profile/sex",
+			"style": {
+				"navigationBarTitleText": "性别",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/profile/region",
+			"style": {
+				"navigationBarTitleText": "地区",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/profile/introduction",
+			"style": {
+				"navigationBarTitleText": "简介",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/setting/index",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/account/index",
+			"style": {
+				"navigationBarTitleText": "账号与安全",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/account/username",
+			"style": {
+				"navigationBarTitleText": "账号",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/account/phone",
+			"style": {
+				"navigationBarTitleText": "手机号",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/account/email",
+			"style": {
+				"navigationBarTitleText": "邮箱",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/account/real",
+			"style": {
+				"navigationBarTitleText": "实名认证",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/account/device",
+			"style": {
+				"navigationBarTitleText": "设备管理",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/account/deviceInfo",
+			"style": {
+				"navigationBarTitleText": "设备信息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/wallet/index",
+			"style": {
+				"navigationBarTitleText": "钱包",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/notice/notice",
+			"style": {
+				"navigationBarTitleText": "通知列表",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/notice/info",
+			"style": {
+				"navigationBarTitleText": "通知详情",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Boot",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#000",
+		"selectedColor": "#009600",
+		"backgroundColor": "#FFF",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "/static/tabBar/home.png",
+				"selectedIconPath": "/static/tabBar/home-select.png"
+			},
+			{
+				"pagePath": "pages/my/index",
+				"text": "我的",
+				"iconPath": "/static/tabBar/my.png",
+				"selectedIconPath": "/static/tabBar/my-select.png"
+			}
+		]
+	}
+}

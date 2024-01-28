@@ -54,6 +54,8 @@
 						let profile = res.data;
 						this.profile = profile;
 						uni.setStorageSync(this.$cache.profile, profile);
+					} else {
+						this.profile = {}
 					}
 				})
 			},
@@ -62,6 +64,8 @@
 					if (res.status) {
 						let account = res.data;
 						this.account = account;
+					} else {
+						this.account = {}
 					}
 				})
 			},

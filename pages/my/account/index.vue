@@ -61,9 +61,18 @@
 						if (res.confirm) {
 							this.$api.signoff().then(res => {
 								if (res.status) {
-									uni.redirectTo({
+									uni.removeStorageSync(this.$cache.token);
+									uni.removeStorageSync(this.$cache.profile);
+									// #ifndef MP
+									uni.reLaunch({
 										url: '/pages/authorize/signin'
 									})
+									// #endif
+									// #ifdef MP
+									uni.switchTab({
+										url: '/pages/index/index'
+									})
+									// #endif
 								}
 							})
 						}

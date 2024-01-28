@@ -84,10 +84,13 @@
 					})
 				} else {
 					uni.downloadFile({
-						url: this.avatar,
+						url: this.profile.avatar,
 						success: (res) => {
 							uni.saveImageToPhotosAlbum({
-								filePath: res.tempFilePath
+								filePath: res.tempFilePath,
+								success: () => {
+									this.$util.showToast('保存成功');
+								}
 							})
 						},
 					})

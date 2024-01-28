@@ -31,7 +31,7 @@
 			<img src="static/img/ios-webview.png" height="100" />
 		</td>
 		<td>
-			<img src="static/img/weinxin.jpg" height="100" />
+			<img src="static/img/weixin.jpg" height="100" />
 		</td>
 	</tr>
 </table>

@@ -43,7 +43,7 @@
 
 		<u-gap height="50"></u-gap>
 
-		<u-button v-if="!device.isSelf" @click="deleteDevice()" color="#009600">删除设备</u-button>
+		<u-button v-if="!device.isSelf" @click="deleteDevice()" color="#009600" text="删除设备"></u-button>
 	</view>
 </template>
 

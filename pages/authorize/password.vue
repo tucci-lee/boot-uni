@@ -16,7 +16,7 @@
 				<u-input v-model="passwordBody.captcha" placeholder="请输入验证码" border="none" maxlength="4" clearable>
 					<template slot="suffix">
 						<u-code ref="smsCode" @change="smsCodeChange"></u-code>
-						<u-button @tap="showImageCaptcha()" color="#009600">{{smsCodeTips}}</u-button>
+						<u-button @tap="showImageCaptcha()" color="#009600" :text="smsCodeTips"></u-button>
 					</template>
 				</u-input>
 			</u-form-item>
@@ -28,7 +28,7 @@
 
 		<u-gap height="20"></u-gap>
 
-		<u-button @click="password()" color="#009600">找回密码</u-button>
+		<u-button @click="password()" color="#009600" text="找回密码"></u-button>
 
 		<u-popup :show="imageCaptchaShow" @open="openImageCaptcha" @close="closeImageCaptcha" mode="center" round="10"
 			:safeAreaInsetBottom="false">
@@ -39,7 +39,7 @@
 
 				<u-gap height="20"></u-gap>
 
-				<u-button @click="getSmsCaptcha()" color="#009600">提交</u-button>
+				<u-button @click="getSmsCaptcha()" color="#009600" text="提交"></u-button>
 			</view>
 		</u-popup>
 	</view>

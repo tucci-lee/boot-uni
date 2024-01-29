@@ -30,13 +30,13 @@
 
 		<u-gap height="20"></u-gap>
 
-		<u-button @click="signin()" color="#009600">登录</u-button>
+		<u-button @click="signin()" color="#009600" text="登录"></u-button>
 
 		<u-gap height="20"></u-gap>
 
 		<view class="other-signin">
 			<view style="width:200rpx">
-				<u-button @click="goQuickSignin()" plain size="small" color="#009600">验证码登录</u-button>
+				<u-button @click="goQuickSignin()" plain size="small" color="#009600" text="验证码登录"></u-button>
 			</view>
 			<view class="other-signin-icon">
 				<text class="icon" style="font-size:50rpx;color:#009600">&#xe638;</text>

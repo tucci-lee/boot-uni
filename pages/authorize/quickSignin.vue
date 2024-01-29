@@ -16,7 +16,7 @@
 				<u-input v-model="signinBody.captcha" placeholder="请输入验证码" border="none" maxlength="4" clearable>
 					<template slot="suffix">
 						<u-code ref="captchaCode" @change="captchaCodeChange"></u-code>
-						<u-button @tap="showImageCaptcha()" color="#009600">{{captchaCodeTips}}</u-button>
+						<u-button @tap="showImageCaptcha()" color="#009600" :text="captchaCodeTips"></u-button>
 					</template>
 				</u-input>
 			</u-form-item>
@@ -34,13 +34,13 @@
 
 		<u-gap height="20"></u-gap>
 
-		<u-button @click="signin()" color="#009600">登录</u-button>
+		<u-button @click="signin()" color="#009600" text="登录"></u-button>
 
 		<u-gap height="20"></u-gap>
 
 		<view class="other-signin">
 			<view style="width:200rpx">
-				<u-button @click="goSignin()" plain size="small" color="#009600">密码登录</u-button>
+				<u-button @click="goSignin()" plain size="small" color="#009600" text="密码登录"></u-button>
 			</view>
 			<view class="other-signin-icon">
 				<text class="icon" style="font-size:50rpx;color:#009600">&#xe638;</text>
@@ -57,7 +57,7 @@
 					<image slot="suffix" @click="getImageCaptcha()" :src="imageCaptchaBase64"></image>
 				</u-input>
 				<u-gap height="20"></u-gap>
-				<u-button @click="getSmsCaptcha()" color="#009600">提交</u-button>
+				<u-button @click="getSmsCaptcha()" color="#009600" text="提交"></u-button>
 			</view>
 		</u-popup>
 	</view>

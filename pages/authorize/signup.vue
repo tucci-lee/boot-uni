@@ -16,7 +16,7 @@
 				<u-input v-model="signupBody.captcha" placeholder="请输入验证码" border="none" maxlength="4" clearable>
 					<template slot="suffix">
 						<u-code ref="captchaCode" @change="captchaCodeChange"></u-code>
-						<u-button @tap="showImageCaptcha()" color="#009600">{{captchaCodeTips}}</u-button>
+						<u-button @tap="showImageCaptcha()" color="#009600" :text="captchaCodeTips"></u-button>
 					</template>
 				</u-input>
 			</u-form-item>
@@ -38,7 +38,7 @@
 
 		<u-gap height="20"></u-gap>
 
-		<u-button @click="signup()" color="#009600">注册</u-button>
+		<u-button @click="signup()" color="#009600" text="注册"></u-button>
 
 
 		<u-popup :show="imageCaptchaShow" @open="openImageCaptcha" @close="closeImageCaptcha" mode="center" round="10"
@@ -50,7 +50,7 @@
 
 				<u-gap height="20"></u-gap>
 
-				<u-button @click="getSmsCaptcha()" color="#009600">提交</u-button>
+				<u-button @click="getSmsCaptcha()" color="#009600" text="提交"></u-button>
 			</view>
 		</u-popup>
 	</view>

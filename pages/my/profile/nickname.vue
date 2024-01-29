@@ -13,7 +13,7 @@
 		
 		<u-gap height="50"></u-gap>
 		
-		<u-button @click="updateNickname()" color="#009600">保存</u-button>
+		<u-button @click="updateNickname()" color="#009600" text="保存"></u-button>
 	</view>
 </template>
 

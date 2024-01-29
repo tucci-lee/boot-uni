@@ -15,7 +15,7 @@
 		<u-gap height="50"></u-gap>
 
 		<view>
-			<u-button @click="signout()" plain color="#009600">退出登录</u-button>
+			<u-button @click="signout()" plain color="#009600" text="退出登录"></u-button>
 		</view>
 	</view>
 </template>

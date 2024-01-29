@@ -32,7 +32,7 @@
 
 		<u-gap height="50"></u-gap>
 
-		<u-button @click="signoff()" plain color="#009600">账号注销</u-button>
+		<u-button @click="signoff()" plain color="#009600" text="账号注销"></u-button>
 	</view>
 </template>
 

@@ -89,7 +89,9 @@
 					let body = {
 						birthday: birthday
 					}
+					this.$util.showLoading();
 					this.$api.updateBirthday(body).then(res => {
+						this.$util.hideLoading();
 						if (res.status) {
 							this.profile.birthday = birthday;
 							this.birthdayShow = false;
@@ -98,7 +100,9 @@
 				}
 			},
 			updateAvatar(response) {
+				this.$util.showLoading();
 				this.$api.updateAvatarApp(response.detail.avatarUrl).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						// 事件发送
 						this.profile.avatar = res.data;

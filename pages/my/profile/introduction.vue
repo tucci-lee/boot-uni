@@ -35,7 +35,9 @@
 				let body = {
 					introduction: this.introduction
 				}
+				this.$util.showLoading();
 				this.$api.updateIntroduction(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						// 事件发送
 						this.profile.introduction = this.introduction;

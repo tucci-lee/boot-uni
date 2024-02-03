@@ -118,7 +118,9 @@
 					type: 'image/png'
 				});
 				let file = new File([blob], new Date() + '.png');
+				this.$util.showLoading();
 				this.$api.updateAvatarH5(file).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						// 事件发送
 						this.profile.avatar = res.data;
@@ -128,7 +130,9 @@
 				})
 				// #endif
 				// #ifdef APP-PLUS
+				this.$util.showLoading();
 				this.$api.updateAvatarApp(data.url).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						// 事件发送
 						this.profile.avatar = res.data;

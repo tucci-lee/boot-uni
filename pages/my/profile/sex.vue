@@ -53,7 +53,9 @@
 				let body = {
 					sex: this.sex
 				}
+				this.$util.showLoading();
 				this.$api.updateSex(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						// 事件发送
 						this.profile.sex = this.sex;

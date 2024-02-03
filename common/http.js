@@ -61,6 +61,7 @@ http.interceptors.response.use((response) => {
 		icon: 'none',
 		title: '网络异常，请稍后再试...'
 	})
+	uni.hideLoading();
 	return Promise.reject(response);
 })
 

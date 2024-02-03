@@ -53,7 +53,9 @@
 					regionCode: region.code,
 					regionName: this.rRegion.name + "." + region.name
 				}
+				this.$util.showLoading();
 				this.$api.updateRegion(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						// 事件发送
 						let profile = uni.getStorageSync(this.$cache.profile);

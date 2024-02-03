@@ -43,7 +43,9 @@
 				let body = {
 					nickname: this.nickname
 				}
+				this.$util.showLoading();
 				this.$api.updateNickname(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						// 事件发送
 						this.profile.nickname = this.nickname;

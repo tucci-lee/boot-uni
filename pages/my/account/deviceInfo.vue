@@ -63,7 +63,9 @@
 					content: '确定删除此设备吗？',
 					success: (res) => {
 						if (res.confirm) {
+							this.$util.showLoading();
 							this.$api.deleteDevice(this.device.token).then(res => {
+								this.$util.hideLoading();
 								if (res.status) {
 									uni.navigateBack();
 								}

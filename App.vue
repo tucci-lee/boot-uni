@@ -43,8 +43,7 @@
 			font-weight: 500;
 		}
 
-		.navbar-right {
-			font-size: 16px;
+		.icon-primary {
 			color: #009600;
 		}
 	}

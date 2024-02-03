@@ -8,12 +8,12 @@
 			<u-cell-group>
 				<u-cell @click="changeSex(1)" title="男" size="large">
 					<view slot="value"></view>
-					<text v-if="sex==1" slot="value" class="icon body-select">&#xe664;</text>
+					<text v-if="sex==1" slot="value" class="icon icon-primary">&#xe664;</text>
 				</u-cell>
 				<u-cell @click="changeSex(0)" title="女" size="large">
 					<!-- 微信小程序不添加这行不显示if中的valuen内容 -->
 					<view slot="value"></view>
-					<text v-if="sex==0" slot="value" class="icon body-select">&#xe664;</text>
+					<text v-if="sex==0" slot="value" class="icon icon-primary">&#xe664;</text>
 				</u-cell>
 			</u-cell-group>
 		</view>
@@ -73,10 +73,6 @@
 	.page {
 		.body {
 			background-color: #FFF;
-
-			.body-select {
-				color: #009600;
-			}
 		}
 	}
 </style>

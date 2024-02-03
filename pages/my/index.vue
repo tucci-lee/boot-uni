@@ -28,7 +28,7 @@
 		<view class="service">
 			<u-cell-group>
 				<u-cell title="设置" @click="goSetting()" size="large" isLink>
-					<text slot="icon" class="icon service-icon">&#xe62b;</text>
+					<text slot="icon" class="icon icon-primary">&#xe62b;</text>
 				</u-cell>
 			</u-cell-group>
 		</view>
@@ -161,11 +161,6 @@
 
 		.service {
 			background-color: #FFF;
-
-			.service-icon {
-				font-size: 50rpx;
-				color: #009600;
-			}
 		}
 	}
 </style>

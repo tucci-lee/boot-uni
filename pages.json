@@ -144,12 +144,6 @@
 			}
 		},
 		{
-			"path": "pages/my/wallet/index",
-			"style": {
-				"navigationBarTitleText": "钱包"
-			}
-		},
-		{
 			"path": "pages/notice/notice",
 			"style": {
 				"navigationBarTitleText": "通知列表",

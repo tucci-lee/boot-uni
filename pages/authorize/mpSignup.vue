@@ -137,6 +137,7 @@
 				if (!this.agreementSelect) {
 					return this.$util.showToast('请勾选用户协议');
 				}
+				this.$util.showLoading();
 				uni.login({
 					success: response => {
 						let body = {
@@ -146,6 +147,7 @@
 							invitedUid: this.signupBody.invitedUid
 						}
 						this.$api.weixinAppletSignup(body).then(res => {
+							this.$util.hideLoading();
 							if (res.status) {
 								uni.setStorageSync(this.$cache.token, res.data.token);
 								uni.setStorageSync(this.$cache.profile, res.data);

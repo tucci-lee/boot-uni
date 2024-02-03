@@ -28,7 +28,9 @@
 		onShow() {},
 		methods: {
 			signout() {
+				this.$util.showLoading();
 				this.$api.signout().then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.removeStorageSync(this.$cache.token);
 						uni.removeStorageSync(this.$cache.profile);

@@ -133,7 +133,9 @@
 					password: this.$encrypt.encrypt(this.passwordBody.password),
 					captcha: this.passwordBody.captcha
 				}
+				this.$util.showLoading();
 				this.$api.password(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.navigateTo({
 							url: '/pages/authorize/signin'

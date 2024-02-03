@@ -86,7 +86,9 @@
 					phone: this.signinBody.phone,
 					password: this.$encrypt.encrypt(this.signinBody.password),
 				}
+				this.$util.showLoading();
 				this.$api.signin(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.setStorageSync(this.$cache.token, res.data.token);
 						uni.setStorageSync(this.$cache.profile, res.data);

@@ -53,7 +53,9 @@
 				let body = {
 					username: this.username
 				}
+				this.$util.showLoading();
 				this.$api.updateUsername(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.navigateBack();
 					}

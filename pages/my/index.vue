@@ -107,12 +107,14 @@
 					return;
 				}
 				// #ifdef MP
+				this.$util.showLoading();
 				uni.login({
 					success: response => {
 						let body = {
 							code: response.code
 						}
 						this.$api.weixinAppletSignin(response).then(res => {
+							this.$util.hideLoading();
 							if (res.status) {
 								uni.setStorageSync(this.$cache.token, res.data.token);
 								uni.setStorageSync(this.$cache.profile, res.data);

@@ -152,7 +152,9 @@
 					captcha: this.signinBody.captcha,
 					invitedUid: this.signinBody.invitedUid
 				}
+				this.$util.showLoading();
 				this.$api.quickSignin(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.setStorageSync(this.$cache.token, res.data.token);
 						uni.setStorageSync(this.$cache.profile, res.data);

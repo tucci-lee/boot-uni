@@ -59,7 +59,9 @@
 					content: '确定要注销吗？',
 					success: (res) => {
 						if (res.confirm) {
+							this.$util.showLoading();
 							this.$api.signoff().then(res => {
+								this.$util.hideLoading();
 								if (res.status) {
 									uni.removeStorageSync(this.$cache.token);
 									uni.removeStorageSync(this.$cache.profile);

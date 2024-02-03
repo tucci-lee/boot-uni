@@ -49,7 +49,9 @@
 					realName: this.updateRealBody.realName,
 					idCard: this.updateRealBody.idCard,
 				}
+				this.$util.showLoading();
 				this.$api.createReal(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.navigateBack();
 					}

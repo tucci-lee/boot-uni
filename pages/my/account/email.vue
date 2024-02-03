@@ -120,7 +120,9 @@
 					email: this.updateEmailBody.email,
 					captcha: this.updateEmailBody.captcha,
 				}
+				this.$util.showLoading();
 				this.$api.updateEmail(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.navigateBack();
 					}

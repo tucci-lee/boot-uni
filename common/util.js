@@ -11,6 +11,7 @@ module.exports = {
 	showLoading: (title) => {
 		uni.showLoading({
 			title: title || '加载中...',
+			mask: true
 		})
 	},
 	timeFormat: (time, format) => {

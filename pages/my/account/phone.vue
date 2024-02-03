@@ -118,7 +118,9 @@
 					phone: this.updatePhoneBody.phone,
 					captcha: this.updatePhoneBody.captcha,
 				}
+				this.$util.showLoading();
 				this.$api.updatePhone(body).then(res => {
+					this.$util.hideLoading();
 					if (res.status) {
 						uni.navigateBack();
 					}

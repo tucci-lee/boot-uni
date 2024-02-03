@@ -9,22 +9,22 @@
 
 		<view v-if="!loading">
 			<u-sticky :customNavHeight="tabsHeight" bgColor="#FFF">
-				<u-tabs :current="categoryActive" :list="categoryList" @change="changeCategory"></u-tabs>
+				<u-tabs :current="categoryActive" :list="categoryList" @change="changeCategory" lineColor="#009600"></u-tabs>
 			</u-sticky>
 
 			<u-gap height="20"></u-gap>
 
 			<view class="body">
 				<u-cell-group>
-					<u-cell v-if="noticeList.length" v-for="(item, index) in noticeList" :key="index"
-						@click="goDetail(item)" :label="timeFormat(item.createTime)">
+					<u-cell v-if="list.length" v-for="(item, index) in list" :key="index" @click="goDetail(item)"
+						:label="timeFormat(item.createTime)">
 						<u-text slot="title" :lines="1" :text="item.title"></u-text>
 						<!-- 微信小程序不添加这行不显示if中的valuen内容 -->
 						<view slot="value"></view>
 						<image slot="value" v-if="item.category" :src="item.category.image"></image>
 					</u-cell>
 				</u-cell-group>
-				<view v-if="!noticeList.length" class="empty">
+				<view v-if="!list.length" class="empty">
 					<u-empty>
 					</u-empty>
 				</view>
@@ -45,9 +45,9 @@
 					id: '',
 					name: '全部'
 				}],
-				noticeList: [],
-				noticeFinish: false,
-				noticeQuery: {
+				list: [],
+				finish: false,
+				query: {
 					pageNo: 1,
 					categoryId: ''
 				},
@@ -55,21 +55,20 @@
 			};
 		},
 		onPullDownRefresh() {
-			this.loading = true;
-			this.noticeFinish = false;
-			this.noticeQuery.pageNo = 1;
-			this.listNotice(true, () => uni.stopPullDownRefresh());
+			this.finish = false;
+			this.query.pageNo = 1;
+			this.listData(true, () => uni.stopPullDownRefresh());
 		},
 		onReachBottom() {
-			if (this.noticeFinish) {
+			if (this.finish) {
 				return;
 			}
-			this.noticeQuery.pageNo++;
-			this.listNotice();
+			this.query.pageNo++;
+			this.listData();
 		},
 		onLoad() {
 			this.listNoticeCategory();
-			this.listNotice();
+			this.listData();
 			let info = uni.getSystemInfoSync();
 			this.tabsHeight = this.tabsHeight + info.safeAreaInsets.top;
 		},
@@ -82,29 +81,29 @@
 				})
 			},
 			changeCategory(item) {
-				if (this.noticeQuery.categoryId !== item.id) {
-					this.noticeFinish = false;
-					this.noticeQuery.categoryId = item.id;
-					this.noticeQuery.pageNo = 1;
-					this.listNotice(true);
+				if (this.query.categoryId !== item.id) {
+					this.finish = false;
+					this.query.categoryId = item.id;
+					this.query.pageNo = 1;
+					this.listData(true);
 				}
 			},
-			listNotice(reset, stop) {
+			listData(reset, stop) {
 				stop && stop()
-				this.$api.listNotice(this.noticeQuery).then(res => {
+				this.$api.listNotice(this.query).then(res => {
 					this.loading = false;
 					if (!res.status) {
 						return;
 					}
 					let data = res.data;
 					if (!data.length) {
-						this.noticeFinish = true;
+						this.finish = true;
 						return;
 					}
 					if (reset) {
-						this.noticeList = data;
+						this.list = data;
 					} else {
-						this.noticeList = [...this.noticeList, ...data];
+						this.list = [...this.list, ...data];
 					}
 				})
 			},

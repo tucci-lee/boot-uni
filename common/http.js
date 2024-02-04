@@ -1,5 +1,6 @@
 import {
-	token
+	token,
+	profile
 } from '@/common/cache.js'
 
 // const baseUrl = 'http://localhost:9000'
@@ -40,6 +41,8 @@ http.interceptors.response.use((response) => {
 		return data;
 	} else {
 		if (data.code == 11111) {
+			uni.removeStorageSync(token);
+			uni.removeStorageSync(profile);
 			// #ifndef MP
 			uni.reLaunch({
 				url: "/pages/authorize/signin"

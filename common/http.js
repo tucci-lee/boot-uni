@@ -2,8 +2,8 @@ import {
 	token
 } from '@/common/cache.js'
 
-// const baseUrl = 'http://192.168.0.103:9000'
-const baseUrl = 'https://api.boot.2cci.cn'
+// const baseUrl = 'http://localhost:9000'
+const baseUrl = 'https://api.boot.tucci.cc'
 const http = uni.$u.http
 
 http.setConfig((config) => {

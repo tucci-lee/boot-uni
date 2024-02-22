@@ -5,7 +5,7 @@
 			<text slot="center" class="navbar-title">登录</text>
 		</u-navbar>
 
-		<u-gap height="250"></u-gap>
+		<u-gap height="150"></u-gap>
 
 		<u-form labelWidth="80">
 			<u-form-item label="手机号" borderBottom>

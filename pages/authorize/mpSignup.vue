@@ -5,7 +5,7 @@
 			<text slot="center" class="navbar-title">注册</text>
 		</u-navbar>
 
-		<u-gap height="50"></u-gap>
+		<u-gap height="150"></u-gap>
 
 		<u-form labelWidth="80">
 			<u-form-item label="手机号" borderBottom>
@@ -24,13 +24,15 @@
 
 		<u-gap height="20"></u-gap>
 
-		<u-radio-group v-model="agreementSelect">
-			<u-radio name="true">
-				<text>我已阅并同意
-					<text class="agreement-text" @click="goUserAgreement()">《用户服务协议》</text>
-				</text>
-			</u-radio>
-		</u-radio-group>
+		<view>
+			<u-radio-group v-model="agreementSelect">
+				<u-radio name="true">
+					<text>我已阅并同意
+						<text class="agreement-text" @click="goUserAgreement()">《用户服务协议》</text>
+					</text>
+				</u-radio>
+			</u-radio-group>
+		</view>
 
 		<u-gap height="20"></u-gap>
 
@@ -171,7 +173,7 @@
 
 <style lang="scss">
 	.page {
-		padding: 200rpx 70rpx 0 70rpx;
+		padding: 0 70rpx;
 
 		.agreement-text {
 			color: blue;

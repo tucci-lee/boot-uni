@@ -26,7 +26,7 @@
 	}
 
 	.page {
-		font-size: 20rpx;
+		font-size: 25rpx;
 		height: 100%;
 		display: flex;
 		flex-direction: column;

@@ -149,7 +149,7 @@
 				flex-direction: column;
 
 				.profile-right-info-nickname {
-					font-size: 18px;
+					font-size: 30rpx;
 					font-weight: 500;
 				}
 

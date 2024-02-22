@@ -5,7 +5,7 @@
 			<text slot="center" class="navbar-title">实名认证</text>
 		</u-navbar>
 
-		<u-gap height="250"></u-gap>
+		<u-gap height="150"></u-gap>
 
 		<u-form labelWidth="80">
 			<u-form-item label="姓名" borderBottom>

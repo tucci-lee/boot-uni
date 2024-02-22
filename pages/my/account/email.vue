@@ -5,7 +5,7 @@
 			<text slot="center" class="navbar-title">邮箱</text>
 		</u-navbar>
 
-		<u-gap height="250"></u-gap>
+		<u-gap height="150"></u-gap>
 
 		<u-form labelWidth="80">
 			<u-form-item label="邮箱" borderBottom>

@@ -5,6 +5,8 @@
 			<text slot="center" class="navbar-title">通知详情</text>
 		</u-navbar>
 		
+		<u-gap height="30"></u-gap>
+		
 		<h3>{{notice.title}}</h3>
 		
 		<u-gap height="20"></u-gap>
@@ -40,11 +42,8 @@
 </script>
 
 <style lang="scss">
-	
-	
 	.page {
-		height: 100vh;
-		padding: 30rpx;
+		padding: 0 30rpx;
 		background-color: #FFF;
 
 		h3 {

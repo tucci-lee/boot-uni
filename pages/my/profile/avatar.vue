@@ -148,17 +148,13 @@
 
 <style lang="scss">
 	.page {
-		height: 100vh;
-		width: 100%;
 		color: #FFF;
 		background-color: #000;
-		display: flex;
-		align-items: center;
+		justify-content: center;
 
 		.avatar {
 			width: 100vw;
 			height: 100vw;
-			padding-bottom: 10vw;
 		}
 	}
 </style>

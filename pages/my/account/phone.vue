@@ -5,7 +5,7 @@
 			<text slot="center" class="navbar-title">手机号</text>
 		</u-navbar>
 
-		<u-gap height="50"></u-gap>
+		<u-gap height="250"></u-gap>
 
 		<u-form labelWidth="80">
 			<u-form-item label="手机号" borderBottom>
@@ -132,7 +132,7 @@
 
 <style lang="scss">
 	.page {
-		padding: 200rpx 70rpx 0 70rpx;
+		padding: 0 70rpx;
 
 		.imageCaptcha {
 			width: 80vw;

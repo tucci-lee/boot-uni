@@ -10,7 +10,9 @@
 
 		<u-gap height="20"></u-gap>
 
-		<u-notice-bar :text="noticeTitle" speed="30" @click="goNotice"></u-notice-bar>
+		<view>
+			<u-notice-bar :text="noticeTitle" speed="30" @click="goNotice"></u-notice-bar>
+		</view>
 
 		<u-gap height="20"></u-gap>
 
@@ -73,6 +75,7 @@
 		.body {
 			display: flex;
 			justify-content: center;
+			flex:1;
 		}
 	}
 </style>

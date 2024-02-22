@@ -4,10 +4,13 @@
 			<text slot="left" class="icon">&#xe660;</text>
 			<text slot="center" class="navbar-title">简介</text>
 		</u-navbar>
-		<u-textarea v-model="introduction" placeholder="请输入内容" count maxlength="200" height="150"></u-textarea>
+		
+		<view>
+			<u-textarea v-model="introduction" placeholder="请输入内容" count maxlength="200" height="150"></u-textarea>
+		</view>
 		
 		<u-gap height="50"></u-gap>
-		
+
 		<u-button @click="updateIntroduction()" color="#009600" text="保存"></u-button>
 	</view>
 </template>

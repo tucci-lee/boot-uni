@@ -17,6 +17,7 @@
 	body,
 	page {
 		background-color: #FAFAFA;
+		height: 100%;
 	}
 
 	@font-face {
@@ -25,7 +26,10 @@
 	}
 
 	.page {
-		font-size: 14px;
+		font-size: 20rpx;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 
 		.safe-top {
 			padding-top: var(--status-bar-height);

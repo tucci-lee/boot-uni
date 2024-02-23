@@ -20,9 +20,6 @@
 
 		<view class="body">
 			<u-cell-group>
-				<u-cell title="实名" :value="account.realName?account.realName:'未实名'" @click="goReal()" size="large"
-					isLink>
-				</u-cell>
 				<u-cell title="设备管理" url="/pages/my/account/device" size="large" isLink>
 				</u-cell>
 				<u-cell title="第三方账号管理" size="large" isLink>

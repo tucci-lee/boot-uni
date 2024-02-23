@@ -125,12 +125,6 @@
 			}
 		},
 		{
-			"path": "pages/my/account/real",
-			"style": {
-				"navigationBarTitleText": "实名认证"
-			}
-		},
-		{
 			"path": "pages/my/account/device",
 			"style": {
 				"navigationBarTitleText": "设备管理",

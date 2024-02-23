@@ -14,6 +14,18 @@ module.exports = {
 			mask: true
 		})
 	},
+	copy: (text, message) => {
+		uni.setClipboardData({
+			data: text,
+			showToast: false,
+			success: () => {
+				uni.showToast({
+					icon: 'none',
+					title: message || '复制成功'
+				})
+			}
+		})
+	},
 	timeFormat: (time, format) => {
 		return uni.$u.timeFormat(parseInt(time), format || 'yyyy-mm-dd hh:MM:ss');
 	},

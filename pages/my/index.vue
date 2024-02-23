@@ -94,13 +94,7 @@
 				})
 			},
 			copy(text) {
-				uni.setClipboardData({
-					data: text,
-					showToast: false,
-					success: () => {
-						this.$util.showToast('复制成功');
-					}
-				})
+				this.$util.copy(text);
 			},
 			goSignin() {
 				if (this.profile.uid) {

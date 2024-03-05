@@ -13,16 +13,6 @@
 			</view>
 		</view>
 
-		<!-- <u-gap height="20"></u-gap>
-
-		<view class="service">
-			<u-cell-group>
-				<u-cell title="钱包" @click="goWallet()" size="large" isLink>
-					<text slot="icon" class="icon service-icon">&#xe6b1;</text>
-				</u-cell>
-			</u-cell-group>
-		</view> -->
-
 		<u-gap height="20"></u-gap>
 
 		<view class="service">
